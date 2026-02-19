@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Time</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+  font-family: 'Verdana', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: #333;
+  
+}
+header nav ul {
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+header nav ul li {
+  margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+header nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last menu item */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #FFF; /* Adjust color of menu item text */
+}
+
+/* Style the logo */
+header nav ul li:first-child img {
+  width: 100px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+#banner img {
+  background-size: cover;
+}
+
+section {
+  padding: 50px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.container{
+    display: flex;
+}
+#packages {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
+}
+
+.package {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 30%; /* Adjust as needed */
+}
+
+.package h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.package ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.package ul li {
+  margin-bottom: 5px;
+}
+
+.package p {
+  color: #777;
+  margin-top: 20px;
+}
+
+.package .btn {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.package .btn:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .package {
+    width: 45%; /* Adjust as needed for smaller screens */
+  }
+}
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services, .about-us {
+  width: 45%;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+.about-us {
+  width: 45%;
+  text-align: center; /* Add this line */
+  margin: 0 auto; /* Add this line */
+}
+/* custom */
+.banner-container {
+  display: flex;
+  align-items: center;
+}
+
+.banner-image {
+  flex: 1;
+}
+
+.banner-image img {
+  width: 100%;
+}
+
+.custom-package {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.custom-package h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.custom-package p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+/* carousel */
+/* Add this to your existing styles or create a new <style> block in your HTML head */
+
+  #contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="IMG/logo.png" alt=""></li>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="aboutup.html">About Us</a></li>
+        <li><a href="serives.html">Services</a></li>
+        <li><a href="package.html">Packages</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+</header>
+  <section id="contact">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">Ready to plan your next event with Party Time? Get in touch with our friendly team today to discuss your requirements and book your date.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+
+      <div>
+        <label for="bronze">Bronze Package</label>
+      </div>
+      <div>
+        <input type="radio" id="silver" name="package" value="Silver">
+        <label for="silver">Silver Package</label>
+      </div>
+      <div>
+        <input type="radio" id="gold" name="package" value="Gold">
+        <label for="gold">Gold Package</label>
+      </div>
+      <div>
+        <input type="radio" id="custom" name="package" value="Custom">
+      </div>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  
+  
+  <footer>
+    <div class="about-us">
+      <h3>About Us</h3>
+      <ul>
+        <li>Party Time is your premier destination for unforgettable events and celebrations.</li>
+        <li>With our expert team and wide range of services, we ensure that every occasion is a spectacular success.</li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="services">
+        <h3>Package</h3>
+        <ul>
+          <li>Bronze Package</li>
+          <li>Silver Package</li>
+          <li>Gold Package</li>
+        </ul>
+      </div>
+      <div class="services">
+        <h3>Our Services</h3>
+        <ul>
+          <li>Themed Events</li>
+          <li>Marquee Parties</li>
+          <li>Special Celebrations</li>
+        </ul>
+      </div>
+      <div class="services">
+        <h3>Contact Address</h3>
+        <ul>
+          <li>Room No.216, Shop House No.2, Time City Complex, <br> Kamayut Township, Yangon</li>
+          <li>Call Now; +959943940323</li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2024 Party Time. All rights reserved SOE MOE NAING.</p>
+  </footer>
+
+</body>
+</html>
+
+
